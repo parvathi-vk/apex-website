@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Metallic Chrome Gradient -->
+    <linearGradient id="apexChrome" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="35%" stop-color="#E2E4E8" />
+      <stop offset="50%" stop-color="#A2A6B0" />
+      <stop offset="52%" stop-color="#6E727D" />
+      <stop offset="80%" stop-color="#CBD0D8" />
+      <stop offset="100%" stop-color="#7B808C" />
+    </linearGradient>
+
+    <!-- Chrome Highlight Filter / Glow -->
+    <linearGradient id="apexRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF333D" />
+      <stop offset="60%" stop-color="#E31B23" />
+      <stop offset="100%" stop-color="#9E0C12" />
+    </linearGradient>
+
+    <!-- Gold Piston Gradient -->
+    <linearGradient id="pistonGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2A8" />
+      <stop offset="30%" stop-color="#E5B842" />
+      <stop offset="70%" stop-color="#B8860B" />
+      <stop offset="100%" stop-color="#704804" />
+    </linearGradient>
+
+    <!-- Shadow -->
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#E31B23" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(0, -5)">
+    <!-- Top Motorcycle & Pistons Emblem -->
+    <g id="apex-emblem" transform="translate(160, 10) scale(0.7)">
+      <!-- Left Piston -->
+      <g transform="translate(60, 75) rotate(-35) scale(0.65)">
+        <rect x="-20" y="-30" width="40" height="40" rx="3" fill="url(#pistonGold)" stroke="#333" stroke-width="2"/>
+        <line x1="-18" y1="-22" x2="18" y2="-22" stroke="#443" stroke-width="2"/>
+        <line x1="-18" y1="-14" x2="18" y2="-14" stroke="#443" stroke-width="2"/>
+        <rect x="-8" y="10" width="16" height="30" fill="url(#apexChrome)" rx="2"/>
+        <circle cx="0" cy="35" r="7" fill="url(#apexChrome)" stroke="#222" stroke-width="2"/>
+      </g>
+
+      <!-- Right Piston -->
+      <g transform="translate(340, 75) rotate(35) scale(0.65)">
+        <rect x="-20" y="-30" width="40" height="40" rx="3" fill="url(#pistonGold)" stroke="#333" stroke-width="2"/>
+        <line x1="-18" y1="-22" x2="18" y2="-22" stroke="#443" stroke-width="2"/>
+        <line x1="-18" y1="-14" x2="18" y2="-14" stroke="#443" stroke-width="2"/>
+        <rect x="-8" y="10" width="16" height="30" fill="url(#apexChrome)" rx="2"/>
+        <circle cx="0" cy="35" r="7" fill="url(#apexChrome)" stroke="#222" stroke-width="2"/>
+      </g>
+
+      <!-- Rear Wheel -->
+      <circle cx="125" cy="85" r="28" fill="#111" stroke="url(#apexChrome)" stroke-width="6"/>
+      <circle cx="125" cy="85" r="16" fill="#000" stroke="#333" stroke-width="3"/>
+      <circle cx="125" cy="85" r="6" fill="url(#apexChrome)"/>
+
+      <!-- Front Wheel -->
+      <circle cx="275" cy="85" r="28" fill="#111" stroke="url(#apexChrome)" stroke-width="6"/>
+      <circle cx="275" cy="85" r="16" fill="#000" stroke="#333" stroke-width="3"/>
+      <circle cx="275" cy="85" r="6" fill="url(#apexChrome)"/>
+
+      <!-- Superbike Body Outline & Fairings -->
+      <!-- Tail / Seat Subframe -->
+      <path d="M 90,45 L 140,55 L 165,68 L 195,50 L 215,38 L 245,35 L 265,22 L 285,42 L 305,62 L 275,68 L 245,56 L 210,65 L 190,82 L 155,80 L 125,58 Z" 
+            fill="url(#apexChrome)" stroke="#222" stroke-width="1.5"/>
+
+      <!-- Inner Shadow Cuts & Fairing Lines -->
+      <path d="M 175,52 L 205,42 L 230,40 L 255,30 L 270,48 L 250,56 L 220,62 L 195,55 Z" fill="#15171C"/>
+      <path d="M 200,66 L 245,58 L 270,72 L 255,88 L 225,86 L 195,78 Z" fill="url(#apexChrome)"/>
+      <path d="M 110,50 L 138,58 L 160,78 L 135,76 Z" fill="#1E2026"/>
+      <path d="M 268,26 L 282,40 L 295,48 L 288,52 L 272,38 Z" fill="#FFFFFF"/>
+      <path d="M 230,86 L 270,86 L 280,68 L 260,65 Z" fill="#0A0B0D"/>
+
+      <!-- Ground Base Line with Red Accents -->
+      <path d="M 70,108 L 165,108" stroke="url(#apexChrome)" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 235,108 L 330,108" stroke="url(#apexChrome)" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Main Typographic Brand Logo -->
+    <g id="apex-typography" transform="translate(100, 115)">
+      <!-- Letter A -->
+      <path d="M 15,48 L 48,0 L 72,0 L 105,48 L 82,48 L 74,35 L 44,35 L 36,48 Z M 50,24 L 68,24 L 59,10 Z" 
+            fill="url(#apexChrome)" stroke="#111" stroke-width="1"/>
+
+      <!-- Letter P -->
+      <path d="M 118,48 L 118,0 L 158,0 C 178,0 188,8 188,23 C 188,38 178,48 158,48 Z M 140,12 L 140,36 L 156,36 C 166,36 170,31 170,24 C 170,17 166,12 156,12 Z" 
+            fill="url(#apexChrome)" stroke="#111" stroke-width="1"/>
+
+      <!-- Letter E -->
+      <path d="M 202,48 L 202,0 L 255,0 L 255,12 L 224,12 L 224,18 L 250,18 L 250,29 L 224,29 L 224,36 L 257,36 L 257,48 Z" 
+            fill="url(#apexChrome)" stroke="#111" stroke-width="1"/>
+
+      <!-- Letter X (Left Chrome Slash, Right Signature Red Slash) -->
+      <!-- Left diagonal (Silver) -->
+      <path d="M 268,0 L 292,0 L 332,48 L 308,48 Z" 
+            fill="url(#apexChrome)" stroke="#111" stroke-width="1"/>
+      
+      <!-- Right diagonal (APEX Signature Red) with Glow -->
+      <path d="M 326,0 L 350,0 L 290,48 L 266,48 Z" 
+            fill="url(#apexRedGrad)" filter="url(#subtleGlow)" stroke="#7A0000" stroke-width="0.5"/>
+    </g>
+
+    <!-- Subtitle: MOTOR WERKS with Red Arrow / Line Accents -->
+    <g id="apex-subtext" transform="translate(100, 180)">
+      <!-- Left Red Accent Arrow -->
+      <path d="M 25, -6 L 85, -6 L 95, -6 L 85, -9 L 25, -6" fill="#E31B23"/>
+      <line x1="15" y1="-6" x2="85" y2="-6" stroke="#E31B23" stroke-width="2.5" stroke-linecap="round"/>
+
+      <!-- Clean Wide-Tracked MOTOR WERKS text -->
+      <text x="200" y="0" text-anchor="middle" font-family="'Space Grotesk', 'Syne', 'Plus Jakarta Sans', 'Arial', sans-serif" font-weight="700" font-size="16" letter-spacing="9" fill="#E8ECEF">
+        MOTOR WERKS
+      </text>
+
+      <!-- Right Red Accent Arrow -->
+      <path d="M 375, -6 L 315, -6 L 305, -6 L 315, -9 L 375, -6" fill="#E31B23"/>
+      <line x1="315" y1="-6" x2="385" y2="-6" stroke="#E31B23" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

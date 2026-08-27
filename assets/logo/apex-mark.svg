@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="markChrome" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="45%" stop-color="#C0C5CF" />
+      <stop offset="55%" stop-color="#7B808C" />
+      <stop offset="100%" stop-color="#4A4E57" />
+    </linearGradient>
+    <linearGradient id="markRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF333D" />
+      <stop offset="100%" stop-color="#B30F15" />
+    </linearGradient>
+  </defs>
+  <!-- Dark Badge Background -->
+  <rect width="120" height="120" rx="28" fill="#0A0A0A" stroke="#222" stroke-width="2"/>
+  
+  <!-- Stylized 'A' and 'X' Slash Icon -->
+  <g transform="translate(18, 22)">
+    <!-- Letter A Metallic -->
+    <path d="M 5,60 L 32,15 L 50,15 L 75,60 L 58,60 L 52,48 L 28,48 L 22,60 Z M 33,38 L 47,38 L 40,24 Z" fill="url(#markChrome)"/>
+    <!-- Racing Red Slash Cut -->
+    <path d="M 78,15 L 94,15 L 48,70 L 32,70 Z" fill="url(#markRed)"/>
+  </g>
+</svg>

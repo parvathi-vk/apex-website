@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>APEX Motor Werks | Premium Motorcycle Service & Diagnostics Studio</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="APEX Motor Werks is a premier motorcycle care studio specializing in big bike servicing, precision diagnostics, oil changes, accessories fitment, and laser wheel balancing. Book your slot on WhatsApp.">
+  <meta name="keywords" content="motorcycle workshop, big bike service, motorcycle diagnostics, superbike service studio, oil change, tyre changing, motorcycle maintenance, APEX Motor Werks">
+  <meta name="author" content="APEX Motor Werks">
+  <meta name="theme-color" content="#050505">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="APEX Motor Werks | Premium Motorcycle Service Studio">
+  <meta property="og:description" content="Your Motorcycle. Our Obsession. Precision diagnostics, big bike servicing, and care for riders who expect more.">
+  <meta property="og:image" content="assets/hero/hero-superbike.jpg">
+  <meta property="og:url" content="https://apexmotorwerks.com">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo/apex-mark.svg">
+  <link rel="apple-touch-icon" href="assets/logo/apex-mark.svg">
+
+  <!-- Google Fonts Preconnect & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Local Business Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "APEX Motor Werks",
+    "image": "assets/logo/apex-logo.svg",
+    "description": "Premium motorcycle care studio offering big bike servicing, ECU diagnostics, race fluids, accessories fitment and precision wheel balancing.",
+    "priceRange": "$$",
+    "openingHours": "Mo-Sa 09:00-19:00",
+    "telephone": "+1-555-019-APEX",
+    "url": "https://apexmotorwerks.com"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Background Ambient Noise & Grid -->
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
+
+  <!-- Floating Desktop Service Preview Card -->
+  <div id="service-preview-float" class="service-floating-preview" aria-hidden="true">
+    <img id="service-preview-img" src="assets/services/big-bike.jpg" alt="Service Preview">
+  </div>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <header id="main-header" class="header-nav">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#hero" class="nav-brand" aria-label="APEX Motor Werks Home">
+        <img src="assets/logo/apex-logo.svg" alt="APEX Motor Werks Logo" class="nav-logo-img" width="180" height="60">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#why-apex" class="nav-link">Why APEX</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav CTA Actions -->
+      <div class="nav-actions">
+        <button type="button" class="btn btn-primary btn-sm btn-shimmer open-booking-modal" data-service="General Service">
+          <span>Book a Slot</span>
+          <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay Menu -->
+  <div id="mobile-nav" class="mobile-nav-overlay" aria-hidden="true">
+    <div class="mobile-nav-links">
+      <a href="#services" class="mobile-nav-link" onclick="closeMobileMenu()">
+        <span>Services</span>
+        <span class="num">01</span>
+      </a>
+      <a href="#experience" class="mobile-nav-link" onclick="closeMobileMenu()">
+        <span>Experience</span>
+        <span class="num">02</span>
+      </a>
+      <a href="#process" class="mobile-nav-link" onclick="closeMobileMenu()">
+        <span>Process</span>
+        <span class="num">03</span>
+      </a>
+      <a href="#why-apex" class="mobile-nav-link" onclick="closeMobileMenu()">
+        <span>Why APEX</span>
+        <span class="num">04</span>
+      </a>
+      <a href="#gallery" class="mobile-nav-link" onclick="closeMobileMenu()">
+        <span>Gallery</span>
+        <span class="num">05</span>
+      </a>
+      <a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">
+        <span>Contact</span>
+        <span class="num">06</span>
+      </a>
+    </div>
+    <div class="mobile-nav-footer">
+      <button type="button" class="btn btn-primary open-booking-modal" style="width: 100%;" onclick="closeMobileMenu()">
+        <i data-lucide="calendar" style="width: 18px; height: 18px;"></i>
+        <span>Book Service on WhatsApp</span>
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section id="hero" class="hero-section">
+      <!-- Background Backdrop with Dark Studio Motorcycle Image -->
+      <div class="hero-backdrop-container">
+        <img src="assets/hero/hero-superbike.jpg" alt="Cinematic superbike in APEX workshop" class="hero-backdrop-img" fetchpriority="high">
+        <div class="hero-vignette"></div>
+      </div>
+
+      <div class="container hero-content">
+        <!-- Studio Certification Pill -->
+        <div class="hero-badge-wrap reveal-on-scroll">
+          <span class="hero-badge-dot"></span>
+          <span class="hero-badge-text">Premium Motorcycle Care Studio</span>
+        </div>
+
+        <!-- Hero Headline -->
+        <h1 class="hero-title reveal-on-scroll reveal-delay-1">
+          Your Motorcycle.<br>
+          <span class="title-accent">Our Obsession.</span>
+        </h1>
+
+        <!-- Supporting Value Proposition -->
+        <p class="hero-lead reveal-on-scroll reveal-delay-2">
+          Precision motorcycle service, electronic diagnostics, and meticulous care for riders who expect nothing less than perfection.
+        </p>
+
+        <!-- Primary & Secondary CTAs -->
+        <div class="hero-cta-group reveal-on-scroll reveal-delay-3">
+          <button type="button" class="btn btn-primary btn-shimmer btn-glow-pulse open-booking-modal" data-service="Big Bike Service">
+            <i data-lucide="calendar-check" style="width: 18px; height: 18px;"></i>
+            <span>Book Your Service</span>
+          </button>
+          
+          <a href="#" id="hero-direct-wa-btn" class="btn btn-secondary direct-wa-link" target="_blank" rel="noopener noreferrer">
+            <i data-lucide="message-circle" style="width: 18px; height: 18px; color: #25D366;"></i>
+            <span>WhatsApp APEX</span>
+          </a>
+        </div>
+
+        <!-- Technical Specification Stats -->
+        <div class="hero-stats-bar reveal-on-scroll reveal-delay-4">
+          <div class="stat-item">
+            <div class="stat-value">100<span class="stat-accent">%</span></div>
+            <div class="stat-label">Torque Calibrated</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">OEM<span class="stat-accent">+</span></div>
+            <div class="stat-label">Diagnostic Tools</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">1:1<span class="stat-accent"></span></div>
+            <div class="stat-label">Dedicated Bay Care</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subtle Scroll Indicator -->
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <span>Scroll to Explore</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BRAND STATEMENT / MANIFESTO SECTION
+         ========================================================================== -->
+    <section class="statement-section">
+      <div class="statement-watermark" aria-hidden="true">APEX WERKS</div>
+      <div class="container statement-content">
+        <div class="statement-pre reveal-on-scroll">// THE APEX STANDARD</div>
+        <div class="statement-headline-1 reveal-on-scroll reveal-delay-1">
+          We don't just service motorcycles.
+        </div>
+        <div class="statement-headline-2 reveal-on-scroll reveal-delay-2">
+          We take care of <span class="highlight">what you ride.</span>
+        </div>
+        <p class="statement-footer-text reveal-on-scroll reveal-delay-3">
+          Every bolt tightened to exact manufacturer torque specs. Every fluid flushed cleanly. No guesswork, no cutting corners—just pure engineering precision and total transparency.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SERVICES SECTION (EDITORIAL INTERACTIVE LIST)
+         ========================================================================== -->
+    <section id="services" class="section services-section">
+      <div class="container">
+        <div class="services-header-row">
+          <div>
+            <div class="section-tag">Engineered Care</div>
+            <h2 class="section-title">Everything Your<br>Bike Needs.</h2>
+          </div>
+          <p class="section-subtitle">
+            From multi-cylinder superbike engine rebuilds to laser wheel balancing, we treat every machine with surgical detail.
+          </p>
+        </div>
+
+        <!-- Interactive Editorial List -->
+        <div class="services-list-editorial">
+          
+          <!-- Service 01 -->
+          <div class="service-item-row reveal-on-scroll" 
+               data-service-name="Big Bike Service" 
+               data-service-img="assets/services/big-bike.jpg">
+            <div class="service-idx">01</div>
+            <div class="service-name-col">
+              <h3>Big Bike Service</h3>
+            </div>
+            <div class="service-desc-col">
+              <p>Comprehensive scheduled maintenance for superbikes, middleweights, and adventure tourers. Valve clearances, throttle body synchronisation, chassis bearing greasing, and cooling system overhaul.</p>
+              <div class="service-tags">
+                <span class="service-tag-pill">Multi-Cylinder</span>
+                <span class="service-tag-pill">Valve Clearance</span>
+                <span class="service-tag-pill">Throttle Sync</span>
+              </div>
+            </div>
+            <div class="service-action-col">
+              <button type="button" class="service-arrow-btn open-booking-modal" data-service="Big Bike Service" aria-label="Book Big Bike Service">
+                <i data-lucide="arrow-right" style="width: 20px; height: 20px;"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Service 02 -->
+          <div class="service-item-row reveal-on-scroll reveal-delay-1" 
+               data-service-name="Troubleshooting & Diagnostics" 
+               data-service-img="assets/services/diagnostics.jpg">
+            <div class="service-idx">02</div>
+            <div class="service-name-col">
+              <h3>Diagnostics & Telemetry</h3>
+            </div>
+            <div class="service-desc-col">
+              <p>State-of-the-art digital ECU scanning, fault code extraction, real-time live sensor logging, electrical harness troubleshooting, and ABS/traction control diagnostics.</p>
+              <div class="service-tags">
+                <span class="service-tag-pill">ECU Scanning</span>
+                <span class="service-tag-pill">Electrical Faults</span>
+                <span class="service-tag-pill">Live Telemetry</span>
+              </div>
+            </div>
+            <div class="service-action-col">
+              <button type="button" class="service-arrow-btn open-booking-modal" data-service="Troubleshooting & Diagnostics" aria-label="Book Diagnostics Service">
+                <i data-lucide="arrow-right" style="width: 20px; height: 20px;"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Service 03 -->
+          <div class="service-item-row reveal-on-scroll reveal-delay-2" 
+               data-service-name="Oil Change & Race Fluids" 
+               data-service-img="assets/services/oil-change.jpg">
+            <div class="service-idx">03</div>
+            <div class="service-name-col">
+              <h3>Oil Change & Fluids</h3>
+            </div>
+            <div class="service-desc-col">
+              <p>Premium 100% synthetic race-grade engine lubricants, OEM titanium/magnetic drain plugs, high-flow oil filters, DOT 5.1 brake bleeding, and organic coolant flushes.</p>
+              <div class="service-tags">
+                <span class="service-tag-pill">Synthetic Ester</span>
+                <span class="service-tag-pill">Brake Bleed</span>
+                <span class="service-tag-pill">Coolant Flush</span>
+              </div>
+            </div>
+            <div class="service-action-col">
+              <button type="button" class="service-arrow-btn open-booking-modal" data-service="Oil Change" aria-label="Book Oil Change">
+                <i data-lucide="arrow-right" style="width: 20px; height: 20px;"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Service 04 -->
+          <div class="service-item-row reveal-on-scroll reveal-delay-3" 
+               data-service-name="Accessories Fitment" 
+               data-service-img="assets/services/accessories.jpg">
+            <div class="service-idx">04</div>
+            <div class="service-name-col">
+              <h3>Accessories Fitment</h3>
+            </div>
+            <div class="service-desc-col">
+              <p>Precision installation of full titanium exhausts, CNC rearsets, crash bobbins, auxiliary LED pods with OEM-grade relay wiring, quickshifters, and carbon fibre body panels.</p>
+              <div class="service-tags">
+                <span class="service-tag-pill">Exhaust Systems</span>
+                <span class="service-tag-pill">Relay Wiring</span>
+                <span class="service-tag-pill">CNC Protection</span>
+              </div>
+            </div>
+            <div class="service-action-col">
+              <button type="button" class="service-arrow-btn open-booking-modal" data-service="Accessories Fitment" aria-label="Book Accessories Fitment">
+                <i data-lucide="arrow-right" style="width: 20px; height: 20px;"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Service 05 -->
+          <div class="service-item-row reveal-on-scroll reveal-delay-4" 
+               data-service-name="Tyre Changing & Balancing" 
+               data-service-img="assets/services/tyre-change.jpg">
+            <div class="service-idx">05</div>
+            <div class="service-name-col">
+              <h3>Tyre Changing & Balancing</h3>
+            </div>
+            <div class="service-desc-col">
+              <p>Scratch-free pneumatic rim mounting, dynamic digital wheel balancing with laser accuracy, valve replacement, bead inspection, and track/street pressure calibration.</p>
+              <div class="service-tags">
+                <span class="service-tag-pill">Scratch-Free Clamping</span>
+                <span class="service-tag-pill">Laser Balancing</span>
+                <span class="service-tag-pill">Track Pressures</span>
+              </div>
+            </div>
+            <div class="service-action-col">
+              <button type="button" class="service-arrow-btn open-booking-modal" data-service="Tyre Changing" aria-label="Book Tyre Changing">
+                <i data-lucide="arrow-right" style="width: 20px; height: 20px;"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         THE APEX EXPERIENCE
+         ========================================================================== -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="experience-grid">
+          
+          <!-- Left Visual Presentation -->
+          <div class="experience-visual-stack reveal-on-scroll">
+            <div class="experience-main-img-wrap">
+              <img src="assets/experience/experience-tech.jpg" alt="Master Technician at APEX Motor Werks" class="experience-main-img" loading="lazy">
+            </div>
+            <div class="experience-floating-badge">
+              <div class="badge-metric">0.05 Nm</div>
+              <div class="badge-desc">Digital torque calibration applied to every critical structural fastener.</div>
+            </div>
+          </div>
+
+          <!-- Right Content Presentation -->
+          <div class="experience-content reveal-on-scroll reveal-delay-2">
+            <div class="section-tag">Studio Philosophy</div>
+            <h2 class="section-title">The APEX Experience</h2>
+            <p class="section-subtitle">
+              The comfort of a rider-focused environment. The precision of a professional motorsport workshop.
+            </p>
+
+            <div class="experience-features-list">
+              
+              <div class="experience-feature-item">
+                <div class="feature-icon-box">
+                  <i data-lucide="shield-check" style="width: 24px; height: 24px;"></i>
+                </div>
+                <div class="feature-info">
+                  <h4>Dust-Controlled Service Bays</h4>
+                  <p>Individual dedicated service stations equipped with surgical illumination and premium motorcycle lifts to ensure your machine stays spotless.</p>
+                </div>
+              </div>
+
+              <div class="experience-feature-item">
+                <div class="feature-icon-box">
+                  <i data-lucide="camera" style="width: 24px; height: 24px;"></i>
+                </div>
+                <div class="feature-info">
+                  <h4>Transparent WhatsApp Updates</h4>
+                  <p>Receive detailed photos and video walkthroughs of every worn part, valve measurement, and oil drain directly on your phone as we work.</p>
+                </div>
+              </div>
+
+              <div class="experience-feature-item">
+                <div class="feature-icon-box">
+                  <i data-lucide="coffee" style="width: 24px; height: 24px;"></i>
+                </div>
+                <div class="feature-info">
+                  <h4>Rider Observation Lounge</h4>
+                  <p>Enjoy specialty espresso and high-speed Wi-Fi while watching your motorcycle being serviced through our panoramic glass viewing gallery.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SERVICE PROCESS (5-STEP FLOW)
+         ========================================================================== -->
+    <section id="process" class="section process-section">
+      <div class="container">
+        <div class="section-tag">How It Works</div>
+        <h2 class="section-title">Service Process</h2>
+        <p class="section-subtitle">
+          A seamless, structured 5-step journey designed for total peace of mind and maximum performance.
+        </p>
+
+        <div class="process-steps-grid">
+          
+          <!-- Step 01 -->
+          <div class="process-step-card reveal-on-scroll">
+            <div class="process-step-num">01</div>
+            <h3 class="process-step-title">Arrive</h3>
+            <p class="process-step-desc">Bring your motorcycle to APEX. Warm check-in, initial briefing, and discussion of your riding style and concerns.</p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="process-step-card reveal-on-scroll reveal-delay-1">
+            <div class="process-step-num">02</div>
+            <h3 class="process-step-title">Inspect</h3>
+            <p class="process-step-desc">Comprehensive 32-point physical check, digital ECU scan, and immediate transparent WhatsApp estimate breakdown.</p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="process-step-card reveal-on-scroll reveal-delay-2">
+            <div class="process-step-num">03</div>
+            <h3 class="process-step-title">Service</h3>
+            <p class="process-step-desc">Precision execution using calibrated torque wrenches, OEM fluids, and factory service manual specifications.</p>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="process-step-card reveal-on-scroll reveal-delay-3">
+            <div class="process-step-num">04</div>
+            <h3 class="process-step-title">Quality Check</h3>
+            <p class="process-step-desc">Dynamic road test verification, secondary torque check on all safety fasteners, and complimentary bike detailing.</p>
+          </div>
+
+          <!-- Step 05 -->
+          <div class="process-step-card reveal-on-scroll reveal-delay-4">
+            <div class="process-step-num">05</div>
+            <h3 class="process-step-title">Ride</h3>
+            <p class="process-step-desc">Key handover, digital service summary, maintenance tips, and the thrill of riding your perfectly tuned machine.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WHY APEX SECTION
+         ========================================================================== -->
+    <section id="why-apex" class="section why-section">
+      <div class="container">
+        <div class="section-tag">The APEX Distinction</div>
+        <h2 class="section-title">Because Your Bike<br>Isn't Just A Bike.</h2>
+        <p class="section-subtitle">
+          We combine factory-trained technical mastery with the passion and respect your machine deserves.
+        </p>
+
+        <div class="why-grid">
+          
+          <!-- Pillar 1 -->
+          <div class="why-card reveal-on-scroll">
+            <div class="why-card-icon">
+              <i data-lucide="award" style="width: 28px; height: 28px;"></i>
+            </div>
+            <h3 class="why-card-title">Experienced Care</h3>
+            <p class="why-card-desc">
+              Dedicated master technicians with extensive experience in high-performance Japanese, European, and American multi-cylinder motorcycles.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="why-card reveal-on-scroll reveal-delay-1">
+            <div class="why-card-icon">
+              <i data-lucide="eye" style="width: 28px; height: 28px;"></i>
+            </div>
+            <h3 class="why-card-title">Transparent Service</h3>
+            <p class="why-card-desc">
+              Zero surprise billing. Upfront transparent quotes with itemized parts breakdown and live photo/video proof for every recommendation.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="why-card reveal-on-scroll reveal-delay-2">
+            <div class="why-card-icon">
+              <i data-lucide="crosshair" style="width: 28px; height: 28px;"></i>
+            </div>
+            <h3 class="why-card-title">Precision Standards</h3>
+            <p class="why-card-desc">
+              Every fastener torqued strictly according to factory workshop manuals using digital Snap-on wrenches and certified diagnostic instruments.
+            </p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="why-card reveal-on-scroll reveal-delay-3">
+            <div class="why-card-icon">
+              <i data-lucide="heart-handshake" style="width: 28px; height: 28px;"></i>
+            </div>
+            <h3 class="why-card-title">Rider First Experience</h3>
+            <p class="why-card-desc">
+              A hassle-free, hospitable service studio where you can converse with your technician directly, ask questions, and enjoy the community.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         GALLERY SECTION
+         ========================================================================== -->
+    <section id="gallery" class="section gallery-section">
+      <div class="container">
+        <div class="services-header-row">
+          <div>
+            <div class="section-tag">Studio Showcase</div>
+            <h2 class="section-title">Precision in Focus</h2>
+          </div>
+          <p class="section-subtitle">
+            Take a look inside our high-tech workshop floor, diagnostic bays, and the incredible machines in our care.
+          </p>
+        </div>
+
+        <!-- Editorial Gallery Grid -->
+        <div class="gallery-grid">
+          
+          <div class="gallery-item span-2 reveal-on-scroll">
+            <img src="assets/gallery/workshop.jpg" alt="APEX Service Studio and Hydraulic Lifts" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">
+                <h4>Main Service Studio</h4>
+                <p>Hydraulic Lifts & Surgical Bay Lighting</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal-on-scroll reveal-delay-1">
+            <img src="assets/gallery/cockpit.jpg" alt="Superbike Cockpit and Clip-ons" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">
+                <h4>Cockpit Instrumentation</h4>
+                <p>Electronics & Steering Damper Setup</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal-on-scroll reveal-delay-2">
+            <img src="assets/gallery/brakes.jpg" alt="Brembo Racing Brakes & Carbon Mudguard" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">
+                <h4>Braking Hardware</h4>
+                <p>Monobloc Calipers & Carbon Detail</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item span-2 reveal-on-scroll reveal-delay-3">
+            <img src="assets/gallery/superbike.jpg" alt="Ducati Superbike Studio Shot" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-caption">
+                <h4>Post-Service Handover</h4>
+                <p>Flawless Finish & Dyno Verification</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FINAL DRAMATIC CTA SECTION
+         ========================================================================== -->
+    <section class="final-cta-section">
+      <div class="final-cta-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-tag" style="justify-content: center;">// RESERVE YOUR SLOT</div>
+        <h2 class="final-cta-title reveal-on-scroll">
+          Ready to Give Your Bike<br>
+          <span class="highlight">Some APEX Care?</span>
+        </h2>
+        <p class="final-cta-copy reveal-on-scroll reveal-delay-1">
+          Slots are limited to ensure dedicated single-bay attention for every motorcycle. Chat with our team now on WhatsApp.
+        </p>
+        <div class="reveal-on-scroll reveal-delay-2">
+          <button type="button" class="btn btn-primary btn-shimmer btn-glow-pulse open-booking-modal" data-service="General Booking" style="font-size: 1.05rem; padding: 1.15rem 2.5rem;">
+            <i data-lucide="message-circle" style="width: 22px; height: 22px;"></i>
+            <span>Book On WhatsApp →</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT & LOCATION SECTION
+         ========================================================================== -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <!-- Contact Details Block -->
+          <div class="contact-info-block reveal-on-scroll">
+            <div>
+              <div class="section-tag">Get In Touch</div>
+              <h2 class="section-title">Visit The Studio</h2>
+              <p class="section-subtitle" style="margin-top: 0.75rem;">
+                Drop by our workshop for a consultation, or connect directly with our service advisors on WhatsApp.
+              </p>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i data-lucide="map-pin" style="width: 20px; height: 20px;"></i>
+              </div>
+              <div class="contact-detail">
+                <h4>Workshop Studio Location</h4>
+                <p>124 Apex Motor Boulevard, Industrial Way, Studio Bay 4</p>
+                <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 2px;">(Placeholder Address - Easily Replaceable)</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i data-lucide="clock" style="width: 20px; height: 20px;"></i>
+              </div>
+              <div class="contact-detail">
+                <h4>Studio Operating Hours</h4>
+                <p>Monday – Saturday: 09:00 AM – 07:00 PM</p>
+                <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 2px;">Sunday: Track Days / By Appointment</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i data-lucide="phone" style="width: 20px; height: 20px;"></i>
+              </div>
+              <div class="contact-detail">
+                <h4>Direct Phone</h4>
+                <p><a href="tel:+1234567890">+1 (555) 019-APEX</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon" style="color: #25D366; background: rgba(37, 211, 102, 0.1); border-color: rgba(37, 211, 102, 0.3);">
+                <i data-lucide="message-square" style="width: 20px; height: 20px;"></i>
+              </div>
+              <div class="contact-detail">
+                <h4>WhatsApp Service Desk</h4>
+                <p><a href="#" class="direct-wa-link" target="_blank" rel="noopener noreferrer">Chat on WhatsApp (Instant Response)</a></p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Location Interactive Card Placeholder -->
+          <div class="map-card-container reveal-on-scroll reveal-delay-2">
+            <div class="map-card-content">
+              <div class="section-tag">Directions & Access</div>
+              <h3>Studio Facility</h3>
+              <p>
+                Convenient access with ample secured superbike parking, trailer unloading bay, and comfortable waiting lounge.
+              </p>
+              <div style="margin-bottom: 2rem;">
+                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+                  <i data-lucide="navigation" style="width: 18px; height: 18px; color: var(--apex-red);"></i>
+                  <span>Open in Google Maps</span>
+                </a>
+              </div>
+            </div>
+
+            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 1.25rem; display: flex; align-items: center; justify-content: space-between;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--apex-red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
+                <span style="font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 600;">@apexmotorwerks</span>
+              </div>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; font-family: var(--font-mono); font-weight: 700;">Follow &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Baseline Footer -->
+        <footer class="site-footer">
+          <div class="footer-copy">
+            &copy; 2026 APEX Motor Werks. All rights reserved. Crafted for riders who expect more.
+          </div>
+          <div class="footer-socials">
+            <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://youtube.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/>
+                <polygon points="10 15 15 12 10 9 10 15"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link direct-wa-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+            </a>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       WHATSAPP SERVICE BOOKING BUILDER MODAL
+       ========================================================================== -->
+  <div id="booking-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+    <div class="booking-modal-card">
+      <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close booking modal">
+        <i data-lucide="x" style="width: 18px; height: 18px;"></i>
+      </button>
+
+      <div class="modal-header">
+        <div class="section-tag">// DIRECT WORKSHOP BOOKING</div>
+        <h3 id="modal-heading" class="modal-title">Book A Service Slot</h3>
+        <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 0.25rem;">
+          Fill out your details below to generate your pre-formatted WhatsApp booking message.
+        </p>
+      </div>
+
+      <form id="booking-form">
+        <!-- Motorcycle Model -->
+        <div class="form-group">
+          <label for="bike-model" class="form-label">Motorcycle Make & Model</label>
+          <input type="text" id="bike-model" class="form-input" placeholder="e.g. Ducati Panigale V4 / BMW S1000RR / Ninja ZX-10R" required>
+        </div>
+
+        <!-- Service Type Selection -->
+        <div class="form-group">
+          <label for="service-select" class="form-label">Service Required</label>
+          <select id="service-select" class="form-select">
+            <option value="Big Bike Service">01 — Big Bike Service</option>
+            <option value="Troubleshooting / Diagnostics">02 — Troubleshooting & Diagnostics</option>
+            <option value="Oil Change">03 — Oil Change & Fluid Service</option>
+            <option value="Accessories Fitment">04 — Accessories Fitment</option>
+            <option value="Tyre Changing">05 — Tyre Changing & Balancing</option>
+            <option value="General Inspection / Other">06 — General Inspection / Other</option>
+          </select>
+        </div>
+
+        <!-- Preferred Date & Time Row -->
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="pref-date" class="form-label">Preferred Date</label>
+            <input type="date" id="pref-date" class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="pref-time" class="form-label">Preferred Time Slot</label>
+            <select id="pref-time" class="form-select">
+              <option value="Morning (09:00 AM - 12:00 PM)">Morning (09:00 AM - 12:00 PM)</option>
+              <option value="Afternoon (12:00 PM - 03:00 PM)">Afternoon (12:00 PM - 03:00 PM)</option>
+              <option value="Evening (03:00 PM - 06:30 PM)">Evening (03:00 PM - 06:30 PM)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Custom Notes -->
+        <div class="form-group">
+          <label for="custom-notes" class="form-label">Specific Concerns / Requests (Optional)</label>
+          <textarea id="custom-notes" class="form-textarea" rows="2" placeholder="e.g. slight front brake shudder, 10,000km service milestone..."></textarea>
+        </div>
+
+        <!-- Live Message Preview Box -->
+        <div class="booking-preview-box">
+          <div class="booking-preview-title">WhatsApp Message Preview:</div>
+          <div id="booking-preview-text" class="booking-preview-text">
+Hi APEX Motor Werks, I'd like to book a service slot.
+
+Motorcycle: [Your Bike Model]
+Service required: Big Bike Service
+Preferred date: [Preferred Date]
+Preferred time: Morning (09:00 AM - 12:00 PM)
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-shimmer" style="width: 100%; justify-content: center; font-size: 0.95rem; padding: 1.1rem;">
+          <i data-lucide="send" style="width: 18px; height: 18px;"></i>
+          <span>Send Booking on WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MOBILE PERSISTENT BOTTOM ACTION BAR
+       ========================================================================== -->
+  <aside class="mobile-bottom-bar" aria-label="Quick Mobile Actions">
+    <div class="mobile-bottom-grid">
+      <a href="tel:+1234567890" class="mobile-action-btn btn-call" aria-label="Call Workshop">
+        <i data-lucide="phone" style="width: 15px; height: 15px;"></i>
+        <span>Call</span>
+      </a>
+      <a href="#" class="mobile-action-btn btn-wa direct-wa-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Us">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        </svg>
+        <span>Chat</span>
+      </a>
+      <button type="button" class="mobile-action-btn btn-book open-booking-modal" data-service="Mobile Quick Book" aria-label="Book Slot">
+        <i data-lucide="calendar" style="width: 15px; height: 15px;"></i>
+        <span>Book Slot</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- JavaScript Module -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
